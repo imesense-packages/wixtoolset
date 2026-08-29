@@ -27,16 +27,16 @@
       This PackageReference is required so the RuntimeTargetsCopyLocalItems have a package (any package would
       do, WixToolset.Data is as good as any) to "attach" themselves to.
     -->
-    <PackageReference Include="WixToolset.Data" />
+    <PackageReference Include="ImeSense.WixToolset.Data" />
 
-    <RuntimeTargetsCopyLocalItems Include="@(NativeLibrary)" 
+    <RuntimeTargetsCopyLocalItems Include="@(NativeLibrary)"
                                   AssetType="native"
-                                  DestinationSubDirectory="runtimes\%(RuntimeIdentifier)\native\" 
-                                  NuGetPackageId="WixToolset.Data"
+                                  DestinationSubDirectory="runtimes\%(RuntimeIdentifier)\native\"
+                                  NuGetPackageId="ImeSense.WixToolset.Data"
                                   RuntimeIdentifier="%(RuntimeIdentifier)"
                                   />
-    <None Include="@(RuntimeTargetsCopyLocalItems)" 
-          Link="%(DestinationSubDirectory)\%(FileName)%(Extension)" 
+    <None Include="@(RuntimeTargetsCopyLocalItems)"
+          Link="%(DestinationSubDirectory)\%(FileName)%(Extension)"
           CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

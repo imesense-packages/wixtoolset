@@ -9,7 +9,7 @@
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <Title>WiX Toolset BootstrapperApplications extension</Title>
     <Description>WiX Toolset BootstrapperApplications extension</Description>
-    <PackageId>WixToolset.Bal.wixext</PackageId>
+    <PackageId>ImeSense.WixToolset.Bal.wixext</PackageId>
     <NuspecBasePath>$(OutputPath)netstandard2.0</NuspecBasePath>
     <NuspecProperties>$(NuspecProperties);WixExtensionPackageFolder=$(WixExtensionPackageFolder)</NuspecProperties>
   </PropertyGroup>

@@ -28,7 +28,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "SinglePrimaryPackage.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -67,7 +67,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "UrlPrereqPackage.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -112,7 +112,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "ImplicitPrimaryPackage.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -157,7 +157,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "IuiBaWarnings.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -212,7 +212,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "CanForceCachePrimaryPackage.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -276,7 +276,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "AllPrereqPackages.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -305,7 +305,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "ImplicitNonMsiPrimaryPackage.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -334,7 +334,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "ImplicitPrimaryPackageEnableFeatureSelection.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -363,7 +363,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "MultipleNonPermanentNonPrimaryPackages.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -393,7 +393,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "MultipleDefaultPrimaryPackages.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -423,7 +423,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "NoDefaultPrimaryPackage.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -452,7 +452,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "NonMsiPrimaryPackage.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -481,7 +481,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "NonPermanentPrereqPackage.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -510,7 +510,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "PermanentPrimaryPackage.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -540,7 +540,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "PrimaryPackageEnableFeatureSelection.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-bindpath", TestData.Get(@"TestData\WixStdBa\Data"),
                     "-o", bundleFile,
@@ -570,7 +570,7 @@ namespace WixToolsetTest.BootstrapperApplications
                 {
                     "build",
                     Path.Combine(bundleSourceFolder, "PrimaryPrereqPackage.wxs"),
-                    "-ext", TestData.Get(@"WixToolset.BootstrapperApplications.wixext.dll"),
+                    "-ext", TestData.Get(@"ImeSense.WixToolset.$1.wixext.dll"),
                     "-intermediateFolder", intermediateFolder,
                     "-o", wixlibFile,
                 });

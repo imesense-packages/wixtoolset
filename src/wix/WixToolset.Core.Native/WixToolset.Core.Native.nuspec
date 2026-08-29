@@ -17,8 +17,8 @@
   </metadata>
 
   <files>
-    <file src="$id$.dll" target="lib\netstandard2.0" />
-    <file src="$id$.xml" target="lib\netstandard2.0" />
+    <file src="$projectName$.dll" target="lib\netstandard2.0" />
+    <file src="$projectName$.xml" target="lib\netstandard2.0" />
 
     <file src="$projectFolder$\cubes\darice.cub" target="lib\netstandard2.0\cubes" />
     <file src="$projectFolder$\cubes\mergemod.cub" target="lib\netstandard2.0\cubes" />

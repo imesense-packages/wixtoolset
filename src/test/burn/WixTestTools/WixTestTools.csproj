@@ -23,9 +23,9 @@
     <PackageReference Include="System.DirectoryServices" />
     <PackageReference Include="System.DirectoryServices.AccountManagement" />
     <PackageReference Include="System.Management" />
-    <PackageReference Include="WixInternal.TestSupport" />
-    <PackageReference Include="WixToolset.Data" />
-    <PackageReference Include="WixToolset.BootstrapperApplicationApi" />
+    <PackageReference Include="ImeSense.WixInternal.TestSupport" />
+    <PackageReference Include="ImeSense.WixToolset.Data" />
+    <PackageReference Include="ImeSense.WixToolset.BootstrapperApplicationApi" />
   </ItemGroup>
 
   <ItemGroup>

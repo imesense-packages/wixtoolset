@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="build\$(MSBuildThisFileName).targets" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="build\$(PackageId).targets" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="tools\WixToolset.Signing.props" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="tools\WixToolset.Signing.targets" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="tools\wix.props" CopyToOutputDirectory="PreserveNewest" />

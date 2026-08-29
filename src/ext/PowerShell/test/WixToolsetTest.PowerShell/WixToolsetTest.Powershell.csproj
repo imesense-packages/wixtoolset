@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixInternal.MSTestSupport" />
-    <PackageReference Include="WixInternal.Core.MSTestPackage" />
+    <PackageReference Include="ImeSense.WixInternal.MSTestSupport" />
+    <PackageReference Include="ImeSense.WixInternal.Core.MSTestPackage" />
   </ItemGroup>
 </Project>

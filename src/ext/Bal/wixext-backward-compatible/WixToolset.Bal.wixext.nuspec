@@ -18,7 +18,7 @@
   <files>
     <file src="$iconPng$" />
     <file src="$projectFolder$\README.md" />
-    <file src="$projectFolder$\WixToolset.Bal.wixext.targets"  target="build" />
+    <file src="$projectFolder$\$id$.targets"  target="build" />
     <file src="WixToolset.BootstrapperApplications.wixext.dll" target="$wixExtensionPackageFolder$" />
     <file src="$eulaTxt$" target="LICENSE.TXT" />
   </files>

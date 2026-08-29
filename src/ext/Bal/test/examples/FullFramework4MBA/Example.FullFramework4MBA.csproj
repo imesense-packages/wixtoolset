@@ -11,6 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixToolset.BootstrapperApplicationApi" />
+    <PackageReference Include="ImeSense.WixToolset.BootstrapperApplicationApi" />
   </ItemGroup>
 </Project>

@@ -34,9 +34,9 @@ dotnet test ^
 
 :clean
 @rd /s/q "..\..\build\burn" 2> nul
-@del "..\..\build\artifacts\WixToolset.Burn.*.nupkg" 2> nul
+@del "..\..\build\artifacts\ImeSense.ImeSense.WixToolset.Burn.*.nupkg" 2> nul
 @del "%_L%\TestResults\burn.trx" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.burn" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.burn" 2> nul
 @exit /b
 
 :end

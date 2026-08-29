@@ -9,6 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixToolset.Extensibility" PrivateAssets="all" />
+    <PackageReference Include="ImeSense.WixToolset.Extensibility" PrivateAssets="all" />
   </ItemGroup>
 </Project>

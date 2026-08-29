@@ -1,4 +1,4 @@
-﻿<Project Sdk="WixToolset.Sdk">
+<Project Sdk="ImeSense.WixToolset.Sdk">
   <PropertyGroup>
     <BA>TestBA</BA>
     <DefineConstants>$(DefineConstants);Version=1.0.0.0</DefineConstants>

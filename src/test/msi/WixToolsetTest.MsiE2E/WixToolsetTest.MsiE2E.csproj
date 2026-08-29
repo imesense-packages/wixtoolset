@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixInternal.TestSupport" />
-    <PackageReference Include="WixToolset.Data" />
+    <PackageReference Include="ImeSense.WixInternal.TestSupport" />
+    <PackageReference Include="ImeSense.WixToolset.Data" />
   </ItemGroup>
 </Project>

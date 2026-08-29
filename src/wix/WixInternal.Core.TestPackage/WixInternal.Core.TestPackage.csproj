@@ -22,12 +22,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixToolset.Data" />
-    <PackageReference Include="WixToolset.Extensibility" />
+    <PackageReference Include="ImeSense.WixToolset.Data" />
+    <PackageReference Include="ImeSense.WixToolset.Extensibility" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixInternal.TestSupport" />
+    <PackageReference Include="ImeSense.WixInternal.TestSupport" />
   </ItemGroup>
 
   <ItemGroup>

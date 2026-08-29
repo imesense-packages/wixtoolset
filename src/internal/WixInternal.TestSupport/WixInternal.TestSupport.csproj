@@ -17,9 +17,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Build.Tasks.Core" />
-    <PackageReference Include="WixToolset.Dtf.WindowsInstaller" />
-    <PackageReference Include="WixToolset.Dtf.Compression" />
-    <PackageReference Include="WixToolset.Dtf.Compression.Cab" />
+    <PackageReference Include="ImeSense.WixToolset.Dtf.WindowsInstaller" />
+    <PackageReference Include="ImeSense.WixToolset.Dtf.Compression" />
+    <PackageReference Include="ImeSense.WixToolset.Dtf.Compression.Cab" />
   </ItemGroup>
 
   <ItemGroup>

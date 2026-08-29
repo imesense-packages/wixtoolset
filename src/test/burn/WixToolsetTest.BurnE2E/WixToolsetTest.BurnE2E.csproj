@@ -18,8 +18,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Owin" />
-    <PackageReference Include="WixInternal.TestSupport" />
-    <PackageReference Include="WixToolset.Data" />
-    <PackageReference Include="WixToolset.BootstrapperApplicationApi" />
+    <PackageReference Include="ImeSense.WixInternal.TestSupport" />
+    <PackageReference Include="ImeSense.WixToolset.Data" />
+    <PackageReference Include="ImeSense.WixToolset.BootstrapperApplicationApi" />
   </ItemGroup>
 </Project>

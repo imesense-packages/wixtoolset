@@ -11,6 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixToolset.Dtf.CustomAction" />
+    <PackageReference Include="ImeSense.WixToolset.Dtf.CustomAction" />
   </ItemGroup>
 </Project>

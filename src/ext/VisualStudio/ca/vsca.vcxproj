@@ -62,7 +62,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Setup.Configuration.Native" />
-    <PackageReference Include="WixToolset.WcaUtil" />
+    <PackageReference Include="ImeSense.WixToolset.WcaUtil" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
 

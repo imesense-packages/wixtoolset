@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixToolset.Data" />
-    <PackageReference Include="WixToolset.Extensibility" />
+    <PackageReference Include="ImeSense.WixToolset.Data" />
+    <PackageReference Include="ImeSense.WixToolset.Extensibility" />
   </ItemGroup>
 </Project>

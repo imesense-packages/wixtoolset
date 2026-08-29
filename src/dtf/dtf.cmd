@@ -23,15 +23,15 @@ msbuild -Restore -t:Pack dtf.slnx -p:Configuration=%_C% -tl -nologo -m -warnaser
 
 :clean
 @rd /s/q "..\..\build\dtf" 2> nul
-@del "..\..\build\artifacts\WixToolset.Dtf.*.nupkg" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.dtf.compression" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.dtf.compression.cab" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.dtf.compression.zip" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.dtf.customaction" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.dtf.resources" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.dtf.windowsinstaller" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.dtf.windowsinstaller.linq" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.dtf.windowsinstaller.package" 2> nul
+@del "..\..\build\artifacts\ImeSense.WixToolset.Dtf.*.nupkg" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.dtf.compression" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.dtf.compression.cab" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.dtf.compression.zip" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.dtf.customaction" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.dtf.resources" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.dtf.windowsinstaller" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.dtf.windowsinstaller.linq" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.dtf.windowsinstaller.package" 2> nul
 @exit /b
 
 :end

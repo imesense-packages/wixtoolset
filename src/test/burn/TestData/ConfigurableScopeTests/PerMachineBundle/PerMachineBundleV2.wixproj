@@ -1,10 +1,10 @@
-﻿<Project Sdk="WixToolset.Sdk">
+<Project Sdk="ImeSense.WixToolset.Sdk">
   <PropertyGroup>
     <OutputType>Bundle</OutputType>
     <DefineConstants>$(DefineConstants);Version=2.0.0.0</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="WixToolset.BootstrapperApplications.wixext" />
+    <PackageReference Include="ImeSense.WixToolset.BootstrapperApplications.wixext" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PerMachinePkg\PerMachinePkg.wixproj" />

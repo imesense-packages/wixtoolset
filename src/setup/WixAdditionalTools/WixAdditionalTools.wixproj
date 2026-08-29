@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="WixToolset.Sdk">
+<Project Sdk="ImeSense.WixToolset.Sdk">
   <PropertyGroup>
     <OutputType>Bundle</OutputType>
     <OutputPath>$(PackageOutputPath)</OutputPath>
@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixToolset.BootstrapperApplications.wixext" />
+    <PackageReference Include="ImeSense.WixToolset.BootstrapperApplications.wixext" />
   </ItemGroup>
 
   <UsingTask TaskName="GenerateMetadata" AssemblyFile="$(BaseOutputPath)$(Configuration)\net472\MetadataTask.dll" />

@@ -347,7 +347,7 @@ namespace WixToolsetTest.Util
         {
             var folder = TestData.Get(@"TestData\BundleWithSearches");
             var rootFolder = TestData.Get();
-            var wixext = Path.Combine(rootFolder, "WixToolset.Util.wixext.dll");
+            var wixext = Path.Combine(rootFolder, "ImeSense.WixToolset.$1.wixext.dll");
 
             using (var fs = new DisposableFileSystem())
             {
@@ -635,7 +635,7 @@ namespace WixToolsetTest.Util
         {
             var folder = TestData.Get("TestData", "BundleWithSearches");
             var rootFolder = TestData.Get();
-            var wixext = Path.Combine(rootFolder, "WixToolset.Util.wixext.dll");
+            var wixext = Path.Combine(rootFolder, "ImeSense.WixToolset.$1.wixext.dll");
 
             using (var fs = new DisposableFileSystem())
             {

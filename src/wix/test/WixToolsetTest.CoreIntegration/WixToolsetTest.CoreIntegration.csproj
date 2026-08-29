@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixInternal.TestSupport" />
-    <PackageReference Include="WixToolset.Dtf.WindowsInstaller.Package" />
+    <PackageReference Include="ImeSense.WixInternal.TestSupport" />
+    <PackageReference Include="ImeSense.WixToolset.Dtf.WindowsInstaller.Package" />
   </ItemGroup>
 </Project>

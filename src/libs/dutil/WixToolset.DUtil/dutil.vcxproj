@@ -35,7 +35,7 @@
     <TargetName>dutil</TargetName>
     <CharacterSet>MultiByte</CharacterSet>
     <Description>WiX Toolset native library foundation</Description>
-    <PackageId>WixToolset.DUtil</PackageId>
+    <PackageId>ImeSense.WixToolset.DUtil</PackageId>
   </PropertyGroup>
 
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

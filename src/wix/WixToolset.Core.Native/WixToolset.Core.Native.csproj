@@ -13,7 +13,7 @@
   <ItemGroup>
     <None Include="cubes\darice.cub" CopyToOutputDirectory="PreserveNewest" />
     <None Include="cubes\mergemod.cub" CopyToOutputDirectory="PreserveNewest" />
-    <None Include="targets\WixToolset.Core.Native.targets" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="targets\$(PackageId).targets" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(NCrunch)'=='' ">
@@ -23,6 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixToolset.Data" />
+    <PackageReference Include="ImeSense.WixToolset.Data" />
   </ItemGroup>
 </Project>

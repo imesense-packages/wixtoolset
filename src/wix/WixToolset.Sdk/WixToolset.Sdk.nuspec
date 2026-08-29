@@ -23,7 +23,7 @@
     <file src="$projectFolder$\README.md" />
     <file src="build\**\*" target="build" />
     <file src="Sdk\**\*" target="Sdk" />
-    <file src="tools\**\*" target="tools" exclude="**\*.xml;**\WixToolset.Core.Native.targets" />
+    <file src="tools\**\*" target="tools" exclude="**\*.xml;**\ImeSense.WixToolset.Core.Native.targets" />
     <file src="$eulaTxt$" target="LICENSE.TXT" />
   </files>
 </package>

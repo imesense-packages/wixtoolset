@@ -163,7 +163,7 @@ rc.exe -fo "$(OutDir)engine.res" "$(IntDir)engine.messages.rc"</Command>
     <WriteLinesToFile Overwrite="true" File="$(BurnGeneratedHeaderDirectory)engine.version.h" Lines="@(BurnVersionLines)" />
   </Target>
   <ItemGroup>
-    <PackageReference Include="WixToolset.DUtil" />
+    <PackageReference Include="ImeSense.WixToolset.DUtil" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>

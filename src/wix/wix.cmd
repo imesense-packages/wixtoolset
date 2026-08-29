@@ -56,21 +56,21 @@ msbuild pack_t.proj -p:Configuration=%_C% -tl -nologo -m -warnaserror -bl:%_L%\w
 :clean
 @rd /s/q "..\..\build\wix" 2> nul
 @del "..\..\build\artifacts\wix.*.nupkg" 2> nul
-@del "..\..\build\artifacts\WixToolset.BuildTasks.*.nupkg" 2> nul
-@del "..\..\build\artifacts\WixToolset.Converters.*.nupkg" 2> nul
-@del "..\..\build\artifacts\WixToolset.Core.*.nupkg" 2> nul
-@del "..\..\build\artifacts\WixToolset.Sdk.*.nupkg" 2> nul
+@del "..\..\build\artifacts\ImeSense.WixToolset.BuildTasks.*.nupkg" 2> nul
+@del "..\..\build\artifacts\ImeSense.WixToolset.Converters.*.nupkg" 2> nul
+@del "..\..\build\artifacts\ImeSense.WixToolset.Core.*.nupkg" 2> nul
+@del "..\..\build\artifacts\ImeSense.WixToolset.Sdk.*.nupkg" 2> nul
 @del "%_L%\TestResults\wix.trx" 2> nul
 @rd /s/q "%USERPROFILE%\.nuget\packages\wix" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.buildtasks" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.converters" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.converters.symbolizer" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.core" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.core.burn" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.core.native" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.core.windowsinstaller" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.buildtasks" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.converters" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.converters.symbolizer" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.core" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.core.burn" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.core.native" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.core.windowsinstaller" 2> nul
 @rd /s/q "%USERPROFILE%\.nuget\packages\wixinternal.core.testpackage" 2> nul
-@rd /s/q "%USERPROFILE%\.nuget\packages\wixtoolset.sdk" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.sdk" 2> nul
 @exit /b
 
 :end

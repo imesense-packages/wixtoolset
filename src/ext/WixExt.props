@@ -9,12 +9,14 @@
     <WixExtensionPackageFolder>wixext7</WixExtensionPackageFolder>
     <PackageTags>$(PackageTags) wixext CustomActions</PackageTags>
     <IsWixExtension>true</IsWixExtension>
+    <!-- The extension assembly name must match the package id so 'wix -ext <packageId>' can resolve the dll in the extension cache. -->
+    <AssemblyName>$(PackageId)</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="$(MSBuildProjectName).targets" PackagePath="build" />
+    <Content Include="$(PackageId).targets" PackagePath="build" />
     <Content Include="$(TargetPath)" PackagePath="$(WixExtensionPackageFolder)" />
 
-    <PackageReference Include="WixToolset.Extensibility" PrivateAssets="all" />
+    <PackageReference Include="ImeSense.WixToolset.Extensibility" PrivateAssets="all" />
   </ItemGroup>
 </Project>

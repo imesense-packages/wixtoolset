@@ -1,11 +1,11 @@
-﻿<Project>
+<Project>
   <PropertyGroup>
     <OutputType>Bundle</OutputType>
     <SuppressSpecificWarnings>1140</SuppressSpecificWarnings>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="WixToolset.BootstrapperApplications.wixext" />
-    <PackageReference Include="WixToolset.NetFx.wixext" />
+    <PackageReference Include="ImeSense.WixToolset.BootstrapperApplications.wixext" />
+    <PackageReference Include="ImeSense.WixToolset.NetFx.wixext" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\TestBA\TestBAWixlib\testbawixlib.wixproj" />

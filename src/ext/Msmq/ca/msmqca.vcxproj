@@ -61,7 +61,7 @@
     <None Include="msmqca.def" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="WixToolset.WcaUtil" />
+    <PackageReference Include="ImeSense.WixToolset.WcaUtil" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

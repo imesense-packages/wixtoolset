@@ -22,7 +22,7 @@
     <file src="$iconPng$" />
     <file src="$projectFolder$\README.md" />
     <file src="$projectFolder$\DotnetToolSettings.xml" target="tools\net8.0\any" />
-    <file src="**" target="tools\net8.0\any" exclude="**\*.xml;**\WixToolset.Core.Native.targets" />
+    <file src="**" target="tools\net8.0\any" exclude="**\*.xml;**\ImeSense.WixToolset.Core.Native.targets" />
     <file src="$eulaTxt$" target="LICENSE.TXT" />
   </files>
 </package>
