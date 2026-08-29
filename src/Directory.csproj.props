@@ -10,8 +10,4 @@
     <DocumentationFile Condition=" '$(CreateDocumentationFile)'=='true' ">$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
     <DebugType Condition=" '$(DebugType)'=='' ">embedded</DebugType>
   </PropertyGroup>
-
-  <PropertyGroup>
-    <AcceptEula>abc;wix7;xyz;123</AcceptEula>
-  </PropertyGroup>
 </Project>

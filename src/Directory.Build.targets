@@ -21,6 +21,11 @@
   <Import Project="internal/SetBuildNumber/SomeVerInfo.targets" />
 
   <PropertyGroup>
+    <!-- The wix.exe CLI requires EULA acceptance for this major version. -->
+    <AcceptEula>wix$(SomeVerInfoMajor)</AcceptEula>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <RepositoryUrl Condition=" '$(RepositoryUrl)'=='' ">https://github.com/wixtoolset/wix</RepositoryUrl>
     <RepositoryType Condition=" '$(RepositoryType)'=='' ">git</RepositoryType>
     <RepositoryCommit Condition=" '$(RepositoryCommit)'=='' ">$(SomeVerInfoSha)</RepositoryCommit>

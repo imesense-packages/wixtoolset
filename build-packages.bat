@@ -133,7 +133,7 @@ msbuild src\wix\pack_t.proj -p:Configuration=Release -nologo -m -warnaserror -bl
 
 echo Building tools Release
 
-msbuild -Restore src	ools	ools_t.proj -p:Configuration=Release -nologo -m -warnaserror -bl:build\logs	ools.binlog || exit /b
+msbuild -Restore src\tools\tools_t.proj -p:Configuration=Release -nologo -m -warnaserror -bl:build\logs\tools.binlog || exit /b
 
 :: ---------------------------------------------------------------------------
 :: Stage: ext - all WiX extensions (Bal, ComPlus, Dependency, Firewall, ...).

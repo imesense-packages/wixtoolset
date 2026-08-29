@@ -4,46 +4,46 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageVersion Include="WixToolset.Dtf.Compression" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Dtf.Compression.Cab" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Dtf.CustomAction" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Dtf.Resources" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Dtf.WindowsInstaller" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Dtf.WindowsInstaller.Package" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Dtf.Compression" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Dtf.Compression.Cab" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Dtf.CustomAction" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Dtf.Resources" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Dtf.WindowsInstaller" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Dtf.WindowsInstaller.Package" Version="{packageversion}" />
 
-    <PackageVersion Include="WixInternal.TestSupport" Version="{packageversion}" />
-    <PackageVersion Include="WixInternal.MSTestSupport" Version="{packageversion}" />
-    <PackageVersion Include="WixInternal.TestSupport.Native" Version="{packageversion}" />
-    <PackageVersion Include="WixInternal.BaseBuildTasks.Sources" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixInternal.TestSupport" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixInternal.MSTestSupport" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixInternal.TestSupport.Native" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixInternal.BaseBuildTasks.Sources" Version="{packageversion}" />
 
-    <PackageVersion Include="WixToolset.DUtil" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.WcaUtil" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.DUtil" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.WcaUtil" Version="{packageversion}" />
 
-    <PackageVersion Include="WixToolset.BootstrapperApplicationApi" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.BootstrapperExtensionApi" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.WixStandardBootstrapperApplicationFunctionApi" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.BootstrapperApplicationApi" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.BootstrapperExtensionApi" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.WixStandardBootstrapperApplicationFunctionApi" Version="{packageversion}" />
 
-    <PackageVersion Include="WixToolset.Data" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Extensibility" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Versioning" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Data" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Extensibility" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Versioning" Version="{packageversion}" />
 
-    <PackageVersion Include="WixToolset.Burn" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Burn" Version="{packageversion}" />
 
-    <PackageVersion Include="WixToolset.Core" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Core.Burn" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Core.WindowsInstaller" Version="{packageversion}" />
-    <PackageVersion Include="WixInternal.Core.TestPackage" Version="{packageversion}" />
-    <PackageVersion Include="WixInternal.Core.MSTestPackage" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Core" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Core.Burn" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Core.WindowsInstaller" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixInternal.Core.TestPackage" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixInternal.Core.MSTestPackage" Version="{packageversion}" />
 
-    <PackageVersion Include="WixToolset.Bal.wixext" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.BootstrapperApplications.wixext" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.ComPlus.wixext" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Dependency.wixext" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.NetFx.wixext" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.UI.wixext" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Util.wixext" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Firewall.wixext" Version="{packageversion}" />
-    <PackageVersion Include="WixToolset.Msmq.wixext" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Bal.wixext" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.BootstrapperApplications.wixext" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.ComPlus.wixext" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Dependency.wixext" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.NetFx.wixext" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.UI.wixext" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Util.wixext" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Firewall.wixext" Version="{packageversion}" />
+    <PackageVersion Include="ImeSense.WixToolset.Msmq.wixext" Version="{packageversion}" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,7 +3,7 @@
 
 <Project>
   <PropertyGroup>
-    <AcceptEula>wix7</AcceptEula>
+    <AcceptEula>wix$(SomeVerInfoMajor)</AcceptEula>
   </PropertyGroup>
 
   <Target Name="_SetWixVersion"

@@ -3,9 +3,9 @@
 
 <Project>
   <ItemGroup>
-    <WixExtension Include="$(MSBuildThisFileDirectory)..\$(WixToolsetExtensionPackageFolder)\WixToolset.BootstrapperApplications.wixext.dll"
-       Condition=" Exists('$(MSBuildThisFileDirectory)..\$(WixToolsetExtensionPackageFolder)\WixToolset.BootstrapperApplications.wixext.dll') " />
+    <WixExtension Include="$(MSBuildThisFileDirectory)..\$(WixToolsetExtensionPackageFolder)\ImeSense.WixToolset.BootstrapperApplications.wixext.dll"
+       Condition=" Exists('$(MSBuildThisFileDirectory)..\$(WixToolsetExtensionPackageFolder)\ImeSense.WixToolset.BootstrapperApplications.wixext.dll') " />
     <UnsupportedWixExtension Include="WixToolset.BootstrapperApplications.wixext"
-      Condition=" !Exists('$(MSBuildThisFileDirectory)..\$(WixToolsetExtensionPackageFolder)\WixToolset.BootstrapperApplications.wixext.dll') " />
+      Condition=" !Exists('$(MSBuildThisFileDirectory)..\$(WixToolsetExtensionPackageFolder)\ImeSense.WixToolset.BootstrapperApplications.wixext.dll') " />
   </ItemGroup>
 </Project>
