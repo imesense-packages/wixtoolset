@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata minClientVersion="4.0">
+    <license type="file">LICENSE.TXT</license>
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
@@ -8,8 +9,6 @@
     <authors>$authors$</authors>
     <icon>icon.png</icon>
     <readme>README.md</readme>
-    <license type="file">OSMFEULA.txt</license>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>$packageTags$</tags>
     <copyright>$copyright$</copyright>
     <projectUrl>$projectUrl$</projectUrl>
@@ -24,12 +23,10 @@
   </metadata>
 
   <files>
-    <file src="$eulaTxt$" />
     <file src="$iconPng$" />
     <file src="$projectFolder$\README.md" />
 
     <file src="$projectFolder$\build\WixToolset.BootstrapperApplicationApi.props" target="build\" />
-    <file src="$licenseAcceptanceTargets$" target="build\$id$.targets" />
 
     <file src="$projectFolder$\build\_._" target="lib\native" />
     <file src="net462\$id$.dll" target="lib\net462" />
@@ -47,5 +44,6 @@
     <file src="v143\x86\balutil.lib" target="build\native\v14\x86" />
     <file src="v143\x64\balutil.lib" target="build\native\v14\x64" />
     <file src="v143\ARM64\balutil.lib" target="build\native\v14\ARM64" />
+    <file src="$eulaTxt$" target="LICENSE.TXT" />
   </files>
 </package>

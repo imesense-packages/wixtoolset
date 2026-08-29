@@ -1,13 +1,12 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata minClientVersion="4.0">
+    <license type="file">LICENSE.TXT</license>
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
     <description>$description$</description>
     <authors>$authors$</authors>
-    <license type="file">OSMFEULA.txt</license>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>$packageTags$</tags>
     <copyright>$copyright$</copyright>
     <projectUrl>$projectUrl$</projectUrl>
@@ -18,7 +17,6 @@
   </metadata>
 
   <files>
-    <file src="$eulaTxt$" />
     <file src="$id$.dll" target="lib\netstandard2.0" />
     <file src="$id$.xml" target="lib\netstandard2.0" />
 
@@ -34,5 +32,6 @@
     <file src="..\ARM64\wixnative.exe" target="runtimes\win-arm64\native" />
     <file src="..\x86\wixnative.exe" target="runtimes\win-x86\native" />
     <file src="..\x64\wixnative.exe" target="runtimes\win-x64\native" />
+    <file src="$eulaTxt$" target="LICENSE.TXT" />
   </files>
 </package>

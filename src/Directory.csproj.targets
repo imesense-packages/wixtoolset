@@ -22,8 +22,6 @@
   <ItemGroup Condition=" '$(IsWixTestProject)'!='true' ">
     <Content Include="$(PackageEulaSource)" Pack="true" PackagePath="/" />
     <Content Include="$(PackageIconSource)" Pack="true" PackagePath="/" />
-    <Content Include="$(PackageLicenseAcceptanceTargets)" Pack="true" PackagePath="build/$(MSBuildProjectName).targets"
-             Condition=" '$(IsWixExtension)' != 'true' " />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(IsWixTestProject)'=='true' ">

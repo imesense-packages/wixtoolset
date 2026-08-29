@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
+    <license type="file">LICENSE.TXT</license>
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
@@ -8,8 +9,6 @@
     <authors>$authors$</authors>
     <icon>icon.png</icon>
     <readme>README.md</readme>
-    <license type="file">OSMFEULA.txt</license>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>$packageTags$ CustomActions</tags>
     <copyright>$copyright$</copyright>
     <projectUrl>$projectUrl$</projectUrl>
@@ -20,11 +19,9 @@
   </metadata>
 
   <files>
-    <file src="$eulaTxt$" />
     <file src="$iconPng$" />
     <file src="$projectFolder$\README.md" />
     <file src="$projectFolder$\$id$.targets" target="build" />
-    <file src="$licenseAcceptanceTargets$" target="build" />
     <file src="net472\WixToolset.Dtf.MakeSfxCA.exe" target="tools" />
     <file src="net472\WixToolset.Dtf.MakeSfxCA.exe.config" target="tools" />
     <file src="net472\WixToolset.Dtf.Compression.dll" target="tools" />
@@ -33,5 +30,6 @@
     <file src="x64\SfxCA.dll" target="tools\x64" />
     <file src="x86\SfxCA.dll" target="tools\x86" />
     <file src="ARM64\SfxCA.dll" target="tools\arm64" />
+    <file src="$eulaTxt$" target="LICENSE.TXT" />
   </files>
 </package>

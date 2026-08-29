@@ -184,47 +184,6 @@
   <!--
     ***********************************************************************************************
     ***********************************************************************************************
-                                                                EULA Section
-    ***********************************************************************************************
-    ***********************************************************************************************
-    -->
-
-  <Target
-    Name="AcceptEula">
-
-    <Error
-      Text="The 'EulaId' property is required. Add '-p:EulaId={eulaId}' to your command-line. For instructions, see https://wixtoolset.org/osmf/"
-      File="$(MSBuildProjectFile)"
-      HelpLink="https://wixtoolset.org/osmf"
-      Condition=" '$(EulaId)' == '' " />
-
-    <WixAcceptEula
-        EulaId="$(EulaId)"
-        NoLogo="true"
-        ToolExe="$(WixToolExe)"
-        ToolPath="$(WixToolDir)" />
-  </Target>
-
-  <Target
-    Name="CheckLicenseAcceptance"
-    BeforeTargets="CoreCompile"
-    Condition=" '$(AcceptEula)' == '' ">
-
-    <PropertyGroup>
-      <WixEulaFile>$(USERPROFILE)\.wix\wix$(WixToolsetMajorVersion)-osmf-eula.txt</WixEulaFile>
-    </PropertyGroup>
-
-    <Error
-      Text="You must accept the Open Source Maintenance Fee (OSMF) EULA to use WiX Toolset v$(WixToolsetMajorVersion). For instructions, see https://wixtoolset.org/osmf/"
-      Code="WIX7015"
-      File="$(MSBuildProjectFile)"
-      HelpLink="https://wixtoolset.org/osmf"
-      Condition=" !Exists('$(WixEulaFile)') " />
-  </Target>
-
-  <!--
-    ***********************************************************************************************
-    ***********************************************************************************************
                                                                 Restore Section
     ***********************************************************************************************
     ***********************************************************************************************
@@ -256,7 +215,6 @@
     -->
   <PropertyGroup>
     <PrepareForBuildDependsOn>
-      CheckLicenseAcceptance;
       ResolveInstallerPlatform;
       $(PrepareForBuildDependsOn)
     </PrepareForBuildDependsOn>
