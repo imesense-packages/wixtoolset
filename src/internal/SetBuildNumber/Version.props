@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project>
+  <!--
+    Single source of truth for the ImeSense WiX Toolset package version.
+    SetBuildNumber.proj reads this file and generates global.json,
+    Directory.Packages.props and build\SomeVerInfo.* from it.
+  -->
+  <PropertyGroup>
+    <ImeSensePackageVersion>7.0.0</ImeSensePackageVersion>
+  </PropertyGroup>
+</Project>

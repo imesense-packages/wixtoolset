@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project DefaultTargets="SetVersion">
+
+  <!--
+    Generates the version-dependent files from the *.pp templates using the
+    fixed version from Version.props (no git tag resolution involved):
+      - global.json
+      - Directory.Packages.props (central package versions)
+      - build\SomeVerInfo.cs / .rc / .props
+  -->
+
+  <PropertyGroup>
+    <RootFolder>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\..\..\))</RootFolder>
+    <GlobalJsonFile>$(RootFolder)global.json</GlobalJsonFile>
+    <CentralPackageVersionsPath>$(RootFolder)Directory.Packages.props</CentralPackageVersionsPath>
+    <SomeVerInfoCsFile>$(RootFolder)build\SomeVerInfo.cs</SomeVerInfoCsFile>
+    <SomeVerInfoRcFile>$(RootFolder)build\SomeVerInfo.rc</SomeVerInfoRcFile>
+    <SomeVerInfoPropsFile>$(RootFolder)build\SomeVerInfo.props</SomeVerInfoPropsFile>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)Version.props" />
+
+  <PropertyGroup>
+    <SomeVerMajor>$([System.Version]::Parse('$(ImeSensePackageVersion)').Major)</SomeVerMajor>
+    <SomeVerMinor>$([System.Version]::Parse('$(ImeSensePackageVersion)').Minor)</SomeVerMinor>
+    <SomeVerPatch>$([System.Version]::Parse('$(ImeSensePackageVersion)').Build)</SomeVerPatch>
+
+    <SomeVerNextMajor>$([MSBuild]::Add($(SomeVerMajor), 1))</SomeVerNextMajor>
+    <SomeVerNextMinor>$([MSBuild]::Add($(SomeVerMinor), 1))</SomeVerNextMinor>
+
+    <SomeVerLabel></SomeVerLabel>
+    <SomeVerDashLabel></SomeVerDashLabel>
+    <SomeVerHeight>0</SomeVerHeight>
+    <SomeVerFullHeight>0</SomeVerFullHeight>
+
+    <AssemblyVersion>$(SomeVerMajor).0.0.0</AssemblyVersion>
+    <FileVersion>$(SomeVerMajor).$(SomeVerMinor).$(SomeVerPatch).$(SomeVerFullHeight)</FileVersion>
+    <PackageVersion>$(ImeSensePackageVersion)</PackageVersion>
+    <InformationalVersion>$(PackageVersion)</InformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <VersionTemplate Include="$(MSBuildThisFileDirectory)global.json.pp" OutputPath="$(GlobalJsonFile)" />
+    <VersionTemplate Include="$(MSBuildThisFileDirectory)Directory.Packages.props.pp" OutputPath="$(CentralPackageVersionsPath)" />
+    <VersionTemplate Include="$(MSBuildThisFileDirectory)SomeVerInfo.cs.pp" OutputPath="$(SomeVerInfoCsFile)" />
+    <VersionTemplate Include="$(MSBuildThisFileDirectory)SomeVerInfo.rc.pp" OutputPath="$(SomeVerInfoRcFile)" />
+    <VersionTemplate Include="$(MSBuildThisFileDirectory)SomeVerInfo.props.pp" OutputPath="$(SomeVerInfoPropsFile)" />
+  </ItemGroup>
+
+  <Target Name="GetGitInfo">
+    <Exec Command="git rev-parse HEAD" ConsoleToMSBuild="true" IgnoreExitCode="true" StandardOutputImportance="low">
+      <Output TaskParameter="ConsoleOutput" PropertyName="SomeVerSha" />
+    </Exec>
+    <PropertyGroup>
+      <SomeVerSha Condition=" '$(SomeVerSha)'=='' ">0000000000000000000000000000000000000000</SomeVerSha>
+      <SomeVerShortSha>$(SomeVerSha.Substring(0, 7))</SomeVerShortSha>
+    </PropertyGroup>
+  </Target>
+
+  <Target Name="SetVersion" DependsOnTargets="GetGitInfo" Inputs="@(VersionTemplate)" Outputs="%(VersionTemplate.OutputPath)">
+    <PropertyGroup>
+      <VersionTemplateText>$([System.IO.File]::ReadAllText('%(VersionTemplate.Identity)'))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{fileversion}', $(FileVersion)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{assemblyversion}', $(AssemblyVersion)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{informationalversion}', $(InformationalVersion)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{packageversion}', $(PackageVersion)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{nextmajor}', $(SomeVerNextMajor)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{nextminor}', $(SomeVerNextMinor)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{major}', $(SomeVerMajor)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{minor}', $(SomeVerMinor)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{patch}', $(SomeVerPatch)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{label}', $(SomeVerLabel)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{dashlabel}', $(SomeVerDashLabel)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{height}', $(SomeVerHeight)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{fullheight}', $(SomeVerFullHeight)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{sha}', $(SomeVerSha)))</VersionTemplateText>
+      <VersionTemplateText>$(VersionTemplateText.Replace('{shortsha}', $(SomeVerShortSha)))</VersionTemplateText>
+    </PropertyGroup>
+
+    <MakeDir Directories="$([System.IO.Path]::GetDirectoryName('%(VersionTemplate.OutputPath)'))" />
+
+    <WriteLinesToFile File="%(VersionTemplate.OutputPath)"
+                      Lines="$(VersionTemplateText)"
+                      Overwrite="true"
+                      WriteOnlyWhenDifferent="true" />
+
+    <Message Importance="high" Text="$(MSBuildProjectName) -&gt; %(VersionTemplate.OutputPath) ($(PackageVersion))" />
+  </Target>
+
+</Project>
