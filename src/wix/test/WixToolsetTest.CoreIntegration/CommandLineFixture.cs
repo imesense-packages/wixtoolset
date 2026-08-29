@@ -15,7 +15,6 @@ namespace WixToolsetTest.CoreIntegration
         {
             var result = WixRunner.Execute(new[]
             {
-                "--acceptEula", "wix" + SomeVerInfo.Major,
                 "build",
                 "-bindpath", "-thisisaswitchnotanarg",
             });
@@ -33,7 +32,6 @@ namespace WixToolsetTest.CoreIntegration
             var result = WixRunner.Execute(new[]
             {
                 "build",
-                "-acceptEula", "wix" + SomeVerInfo.Major,
                 "-platform", "foo",
             });
 

@@ -38,7 +38,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath,
                 [
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     "-p:SignOutput=true",
                 ]);
@@ -82,7 +81,6 @@ namespace WixToolsetTest.Sdk
                 var projectPath = Path.Combine(baseFolder, "UncompressedBundle.wixproj");
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[] {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     "-p:SignOutput=true"
                 });
@@ -126,7 +124,6 @@ namespace WixToolsetTest.Sdk
                 var projectPath = Path.Combine(baseFolder, "SimpleMergeModule.wixproj");
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[] {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                 });
                 result.AssertSuccess();
@@ -165,7 +162,6 @@ namespace WixToolsetTest.Sdk
                 var projectPath = Path.Combine(baseFolder, "MsiPackage.wixproj");
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[] {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     "-p:SignOutput=true"
                 });
@@ -221,7 +217,6 @@ namespace WixToolsetTest.Sdk
                 var projectPath = Path.Combine(baseFolder, "MergeMsiPackage.wixproj");
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[] {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                 });
                 result.AssertSuccess();
@@ -261,7 +256,6 @@ namespace WixToolsetTest.Sdk
                 var projectPath = Path.Combine(baseFolder, "MsiPackageWithBindVariables.wixproj");
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[] {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                 });
                 result.AssertSuccess();
@@ -345,7 +339,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "PdbOutputDir", pdbFolder),
                     "-p:SuppressValidation=true"
@@ -378,7 +371,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     $"-p:Platform=x64",
                 });
@@ -417,7 +409,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "SuppressIces", "ICE12"),
                 }, suppressValidation: false);
@@ -442,7 +433,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "SuppressSpecificWarnings", "1118;1102"),
                 });
@@ -470,7 +460,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                 });
                 result.AssertSuccess();
@@ -505,7 +494,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, slnPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                 });
                 result.AssertSuccess();
@@ -551,7 +539,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     "-p:OutputType=IntermediatePostLink",
                 });
@@ -584,7 +571,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                 });
                 result.AssertSuccess();
@@ -616,7 +602,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                 });
                 result.AssertSuccess();
@@ -648,7 +633,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                 });
                 result.AssertSuccess();
@@ -680,7 +664,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     "-p:RuntimeIdentifier=win-arm64",
                 });
@@ -717,7 +700,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                 });
                 result.AssertSuccess();
@@ -751,7 +733,6 @@ namespace WixToolsetTest.Sdk
                 // Build
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                 }, verbosityLevel: "diag");
                 result.AssertSuccess();
@@ -767,7 +748,6 @@ namespace WixToolsetTest.Sdk
                 // Clean
                 result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     "-t:Clean",
                 }, verbosityLevel: "diag");
@@ -815,7 +795,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[] {
                     "-Restore",
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                     });
                 result.AssertSuccess();
@@ -854,7 +833,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, [
                     "-Restore",
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                     ]);
                 result.AssertSuccess();
@@ -885,7 +863,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[] {
                     "-Restore",
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                     });
                 result.AssertSuccess();
@@ -928,7 +905,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[] {
                     "-Restore",
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                     });
 
@@ -959,7 +935,6 @@ namespace WixToolsetTest.Sdk
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, 
                 [
                     "-Restore",
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                 ]);
 
@@ -990,7 +965,6 @@ namespace WixToolsetTest.Sdk
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath,
                 [
                     "-Restore",
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath)
                 ]);
 
@@ -1018,7 +992,6 @@ namespace WixToolsetTest.Sdk
                 var projectPath = Path.Combine(baseFolder, "WixlibMissingExtension.wixproj");
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[] {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     "-p:SignOutput=true",
                     });
@@ -1059,7 +1032,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                 });
                 result.AssertSuccess();
@@ -1117,7 +1089,6 @@ namespace WixToolsetTest.Sdk
 
                 var result = MsbuildUtilities.BuildProject(buildSystem, projectPath, new[]
                 {
-                    "-p:AcceptEula=wix" + SomeVerInfo.Major,
                     MsbuildUtilities.GetQuotedPropertySwitch(buildSystem, "WixMSBuildProps", MsbuildFixture.WixPropsPath),
                     debugType == null ? String.Empty : $"-p:DebugType={debugType}",
                     "-p:SuppressValidation=true"

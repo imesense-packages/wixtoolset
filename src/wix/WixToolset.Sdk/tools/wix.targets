@@ -43,7 +43,6 @@
   <UsingTask TaskName="ResolveInstallerPlatform" AssemblyFile="$(WixTasksPath)" />
   <UsingTask TaskName="ResolveWixReferences" AssemblyFile="$(WixTasksPath)" />
   <UsingTask TaskName="WixBuild" AssemblyFile="$(WixTasksPath)" />
-  <UsingTask TaskName="WixAcceptEula" AssemblyFile="$(WixTasksPath)" />
   <UsingTask TaskName="WindowsInstallerValidation" AssemblyFile="$(WixTasksPath)" />
 
   <!--
@@ -692,7 +691,6 @@
         CabinetCachePath="$(_WixBuildCabinetCachePath)"
         CabinetCreationThreadCount="$(CabinetCreationThreadCount)"
         DefaultCompressionLevel="$(DefaultCompressionLevel)"
-        AcceptEula="$(AcceptEula)"
 
         SuppressAllWarnings="$(SuppressAllWarnings)"
         SuppressSpecificWarnings="$(SuppressSpecificWarnings)"
@@ -722,7 +720,6 @@
           Ices="$(Ices)"
           SuppressIces="$(SuppressIces)"
           CubeFiles="$(AdditionalCub)"
-          AcceptEula="$(AcceptEula)"
 
           AdditionalOptions="$(ValidationAdditionalOptions)"
 

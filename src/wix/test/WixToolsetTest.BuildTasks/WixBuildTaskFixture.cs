@@ -54,7 +54,6 @@ namespace WixToolsetTest.BuildTasks
                     PdbType = "Full",
                     PdbFile = new TaskItem(pdbPath),
                     DefaultCompressionLevel = "nOnE",
-                    AcceptEula = "wix" + SomeVerInfo.Major,
                     ToolPath = PublishedWixExeFolder
                 };
 

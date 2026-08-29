@@ -56,7 +56,6 @@ namespace WixInternal.TestSupport
 
                 var args = new List<string>
                 {
-                    "-acceptEula", "wix" + SomeVerInfo.Major,
                     "build",
                     "-o", outputPath,
                     "-intermediateFolder", intermediateFolder,
@@ -90,7 +89,6 @@ namespace WixInternal.TestSupport
                     {
                         "msi",
                         "validate",
-                        "-acceptEula", "wix" + SomeVerInfo.Major,
                         "-intermediateFolder", intermediateFolder,
                         outputPath,
                     };
@@ -122,7 +120,6 @@ namespace WixInternal.TestSupport
                 {
                     "build",
                     "-o", outputPath,
-                    "-acceptEula", "wix" + SomeVerInfo.Major,
                     "-intermediateFolder", intermediateFolder,
                 };
 
@@ -153,7 +150,6 @@ namespace WixInternal.TestSupport
                     firstBuildArgs = new List<string>
                     {
                         "msi", "validate",
-                        "-acceptEula", "wix" + SomeVerInfo.Major,
                         "-intermediateFolder", intermediateFolder,
                         outputPath,
                     };
@@ -164,7 +160,6 @@ namespace WixInternal.TestSupport
                 // Decompile built output.
                 var decompileArgs = new List<string>
                 {
-                    "-acceptEula", "wix" + SomeVerInfo.Major,
                     "msi", "decompile",
                     outputPath,
                     "-intermediateFolder", decompileIntermediateFolder,
@@ -185,7 +180,6 @@ namespace WixInternal.TestSupport
                 {
                     "build",
                     decompilePath,
-                    "-acceptEula", "wix" + SomeVerInfo.Major,
                     "-o", decompileBuildPath,
                     "-intermediateFolder", decompileIntermediateFolder
                 };

@@ -15,7 +15,6 @@ namespace WixToolset.Core.CommandLine
         {
             this.ServiceProvider = serviceProvider;
             this.Messaging = serviceProvider.GetService<IMessaging>();
-            this.AcceptedEulaValues = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         }
 
         private IServiceProvider ServiceProvider { get; }
@@ -25,8 +24,6 @@ namespace WixToolset.Core.CommandLine
         private bool ShowHelp { get; set; }
 
         private bool SuppressLogo { get; set; }
-
-        private HashSet<string> AcceptedEulaValues { get; }
 
         public ICommandLineCommand CreateCommand(string[] args)
         {
@@ -128,12 +125,6 @@ namespace WixToolset.Core.CommandLine
                 extension.PostParse();
             }
 
-            if (command != null && this.RequiresEulaAcceptance(command) && !EulaCommand.IsAccepted(this.AcceptedEulaValues))
-            {
-                parser.ReportErrorArgument("eula", CoreErrors.AcceptEulaRequired());
-                command = null;
-            }
-
             // If we hit an error, do not return a command.
             if (!String.IsNullOrEmpty(parser.ErrorArgument))
             {
@@ -169,14 +160,6 @@ namespace WixToolset.Core.CommandLine
                     case "-version":
                         command = new VersionCommand();
                         break;
-
-                    case "accepteula":
-                    case "-accepteula":
-                    {
-                        var value = parser.GetNextArgumentOrError(arg);
-                        this.AcceptedEulaValues.Add(value);
-                        return true;
-                    }
                 }
             }
             else
@@ -185,10 +168,6 @@ namespace WixToolset.Core.CommandLine
                 {
                     case "build":
                         command = new BuildCommand(this.ServiceProvider);
-                        break;
-
-                    case "eula":
-                        command = new EulaCommand(this.ServiceProvider);
                         break;
 
                     default:
@@ -242,14 +221,6 @@ namespace WixToolset.Core.CommandLine
                 case "verbose":
                     this.Messaging.ShowVerboseMessages = true;
                     return true;
-
-                case "accepteula":
-                case "-accepteula":
-                {
-                    var value = parser.GetNextArgumentOrError(arg);
-                    this.AcceptedEulaValues.Add(value);
-                    return true;
-                }
             }
 
             if (parameter.StartsWith("sw"))
@@ -269,13 +240,6 @@ namespace WixToolset.Core.CommandLine
             }
 
             return false;
-        }
-
-        private bool RequiresEulaAcceptance(ICommandLineCommand command)
-        {
-            return !(command is HelpCommand) &&
-                   !(command is VersionCommand) &&
-                   !(command is EulaCommand);
         }
 
         private void ParseSuppressWarning(string parameter, int offset, ICommandLineParser parser)

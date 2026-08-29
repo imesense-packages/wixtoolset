@@ -200,7 +200,6 @@
         TreatWarningsAsErrors="$(InscribeTreatWarningsAsErrors)"
         TreatSpecificWarningsAsErrors="$(InscribeTreatSpecificWarningsAsErrors)"
         VerboseOutput="$(InscribeVerboseOutput)"
-        AcceptEula="$(AcceptEula)"
         AdditionalOptions="$(InscribeAdditionalOptions)"
 
         ToolExe="$(WixToolExe)"
@@ -241,7 +240,6 @@
         TreatWarningsAsErrors="$(InscribeTreatWarningsAsErrors)"
         TreatSpecificWarningsAsErrors="$(InscribeTreatSpecificWarningsAsErrors)"
         VerboseOutput="$(InscribeVerboseOutput)"
-        AcceptEula="$(AcceptEula)"
         AdditionalOptions="$(InscribeAdditionalOptions)"
 
         ToolExe="$(WixToolExe)"
@@ -290,7 +288,6 @@
         TreatWarningsAsErrors="$(InscribeTreatWarningsAsErrors)"
         TreatSpecificWarningsAsErrors="$(InscribeTreatSpecificWarningsAsErrors)"
         VerboseOutput="$(InscribeVerboseOutput)"
-        AcceptEula="$(AcceptEula)"
         AdditionalOptions="$(InscribeAdditionalOptions)"
 
         ToolExe="$(WixToolExe)"

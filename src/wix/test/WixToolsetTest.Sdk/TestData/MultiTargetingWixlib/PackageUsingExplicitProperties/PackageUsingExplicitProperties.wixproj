@@ -4,7 +4,6 @@
 
   <PropertyGroup>
     <!-- Add some random EULA Ids for testing purposes. -->
-    <AcceptEula>foo;wix7;bar</AcceptEula>
   </PropertyGroup>
 
   <ItemGroup>

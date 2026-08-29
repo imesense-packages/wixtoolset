@@ -12,7 +12,7 @@
     <SetProperty Id="ARPINSTALLLOCATION" Value="[INSTALLFOLDER]" After="CostFinalize" />
 
     <ui:WixUI Id="WixUI_Minimal" />
-    <WixVariable Id="WixUILicenseRtf" Value="..\OSMFEULA.rtf" />
+    <WixVariable Id="WixUILicenseRtf" Value="..\LICENSE.rtf" />
   </Package>
 
   <Fragment>

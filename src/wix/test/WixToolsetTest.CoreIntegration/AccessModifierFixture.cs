@@ -165,7 +165,6 @@ namespace WixToolsetTest.CoreIntegration
                 {
                     "build",
                     sourceFile,
-                    "-acceptEula", "wix" + SomeVerInfo.Major,
                     "-intermediateFolder", intermediateFolder,
                     "-o", msiPath
                 });
@@ -188,7 +187,6 @@ namespace WixToolsetTest.CoreIntegration
 
                 var result = WixRunner.Execute(new[]
                 {
-                    "-acceptEula", "wix" + SomeVerInfo.Major,
                     "build",
                     sourceFile,
                     "-intermediateFolder", intermediateFolder,

@@ -5,13 +5,6 @@ The `wix` package provides the WiX Toolset as a .NET Tool, perfect for your comm
 [Web Site][web] | [Documentation][docs] | [Issue Tracker][issues] | [Discussions][discussions]
 
 
-## Open Source Maintenance Fee
-
-To ensure the long-term sustainability of this project, users of this package who generate revenue must pay an [Open Source Maintenance Fee][osmf]. While the source code is freely available under the terms of the [LICENSE][license], this package and other aspects of the project require [adherence to the Open Source Maintenance Fee EULA][eula].
-
-To pay the Maintenance Fee, [become a Sponsor](https://github.com/sponsors/wixtoolset).
-
-
 ## Before we begin
 
 For most users, we recommend using the [WixToolset.Sdk][sdk] to build your installation packages instead of this command-line tool. The Sdk provides a better development experience than the command-line, especially as your project grows. The following is a quick example.
@@ -67,6 +60,4 @@ For more information, see https://docs.firegiant.com/wix/using-wix/#command-line
 [issues]: https://github.com/wixtoolset/issues/issues
 [discussions]: https://github.com/orgs/wixtoolset/discussions
 [sdk]: https://www.nuget.org/packages/WixToolset.Sdk/
-[osmf]: https://opensourcemaintenancefee.org/
 [license]: https://github.com/wixtoolset/wix/blob/main/LICENSE.TXT
-[eula]: https://github.com/wixtoolset/wix/blob/main/OSMFEULA.txt

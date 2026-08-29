@@ -6,7 +6,6 @@
     <SignOutput>true</SignOutput>
 
     <!-- Add some random EULA Ids for testing purposes. -->
-    <AcceptEula>abc;xyz;123;wix7</AcceptEula>
   </PropertyGroup>
 
   <ItemGroup>

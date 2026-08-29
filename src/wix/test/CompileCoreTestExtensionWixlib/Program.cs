@@ -18,7 +18,6 @@ namespace CompileCoreTestExtensionWixlib
             var buildArgs = new List<string>
             {
               "build",
-              "-acceptEula", "wix" + SomeVerInfo.Major,
               "-bindfiles",
               "-intermediateFolder", intermediateFolder,
               "-o", wixlibPath

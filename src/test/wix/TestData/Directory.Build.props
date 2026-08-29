@@ -7,7 +7,4 @@
     from the root src directory
   -->
 
-  <PropertyGroup>
-    <AcceptEula>wix7</AcceptEula>
-  </PropertyGroup>
-</Project>
+  </Project>

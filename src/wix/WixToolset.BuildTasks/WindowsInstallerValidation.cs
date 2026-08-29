@@ -10,10 +10,6 @@ namespace WixToolset.BuildTasks
     /// </summary>
     public sealed class WindowsInstallerValidation : WixExeBaseTask
     {
-        /// <summary>
-        /// Optional EULA acceptance.
-        /// </summary>
-        public string AcceptEula { get; set; }
 
         /// <summary>
         /// Gets or sets the path to the database to validate.
@@ -56,7 +52,6 @@ namespace WixToolset.BuildTasks
             commandLineBuilder.AppendArrayIfNotNull("-cub ", this.CubeFiles);
             commandLineBuilder.AppendArrayIfNotNull("-ice ", this.Ices);
             commandLineBuilder.AppendArrayIfNotNull("-sice ", this.SuppressIces);
-            commandLineBuilder.AppendTextAsArray("-acceptEula ", this.AcceptEula);
 
             base.BuildCommandLine(commandLineBuilder);
         }

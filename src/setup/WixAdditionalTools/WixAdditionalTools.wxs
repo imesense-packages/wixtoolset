@@ -6,7 +6,7 @@
           AboutUrl="!(loc.AboutUrl)" HelpUrl="!(loc.SupportUrl)" UpdateUrl="!(loc.UpdateUrl)">
     <BootstrapperApplication>
       <bal:WixStandardBootstrapperApplication
-        LicenseFile="..\OSMFEULA.rtf"
+        LicenseFile="..\LICENSE.rtf"
         Theme="rtfLicense"
         ShowVersion="true"
         LogoFile="wix-logo-sq.png" />
