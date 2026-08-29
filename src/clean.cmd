@@ -62,6 +62,7 @@ if exist "%_NUGET_CACHE%\imesense.wixtoolset.versioning" rd /s/q "%_NUGET_CACHE%
 if exist "%_NUGET_CACHE%\imesense.wixtoolset.visualstudio.wixext" rd /s/q "%_NUGET_CACHE%\imesense.wixtoolset.visualstudio.wixext"
 if exist "%_NUGET_CACHE%\imesense.wixtoolset.wcautil" rd /s/q "%_NUGET_CACHE%\imesense.wixtoolset.wcautil"
 if exist "%_NUGET_CACHE%\wix" rd /s/q "%_NUGET_CACHE%\wix"
+if exist "%_NUGET_CACHE%\imesense.wix" rd /s/q "%_NUGET_CACHE%\imesense.wix"
 
 popd
 endlocal

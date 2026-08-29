@@ -56,12 +56,14 @@ msbuild pack_t.proj -p:Configuration=%_C% -tl -nologo -m -warnaserror -bl:%_L%\w
 :clean
 @rd /s/q "..\..\build\wix" 2> nul
 @del "..\..\build\artifacts\wix.*.nupkg" 2> nul
+@del "..\..\build\artifacts\ImeSense.Wix.*.nupkg" 2> nul
 @del "..\..\build\artifacts\ImeSense.WixToolset.BuildTasks.*.nupkg" 2> nul
 @del "..\..\build\artifacts\ImeSense.WixToolset.Converters.*.nupkg" 2> nul
 @del "..\..\build\artifacts\ImeSense.WixToolset.Core.*.nupkg" 2> nul
 @del "..\..\build\artifacts\ImeSense.WixToolset.Sdk.*.nupkg" 2> nul
 @del "%_L%\TestResults\wix.trx" 2> nul
 @rd /s/q "%USERPROFILE%\.nuget\packages\wix" 2> nul
+@rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wix" 2> nul
 @rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.buildtasks" 2> nul
 @rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.converters" 2> nul
 @rd /s/q "%USERPROFILE%\.nuget\packages\imesense.wixtoolset.converters.symbolizer" 2> nul
