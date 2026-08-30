@@ -3,7 +3,7 @@
 <WixLocalization xmlns="http://wixtoolset.org/schemas/v4/wxl">
     <String Id="Company" Overridable="yes" Value=".NET Foundation" />
     <String Id="Copyright" Overridable="yes" Value="Copyright (c) .NET Foundation and contributors. All rights reserved." />
-    <String Id="Name" Overridable="yes" Value="WiX Toolset Additional Tools" />
+    <String Id="Name" Overridable="yes" Value="ImeSense WiX Toolset Additional Tools" />
     <String Id="Regid" Overridable="yes" Value="wixtoolset.org" />
     <String Id="AboutUrl" Overridable="yes" Value="https://wixtoolset.org/" />
     <String Id="SupportUrl" Overridable="yes" Value="https://wixtoolset.org/docs/gethelp/" />

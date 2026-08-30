@@ -21,7 +21,7 @@
   <Import Project="internal/SetBuildNumber/SomeVerInfo.targets" />
 
   <PropertyGroup>
-    <RepositoryUrl Condition=" '$(RepositoryUrl)'=='' ">https://github.com/wixtoolset/wix</RepositoryUrl>
+    <RepositoryUrl Condition=" '$(RepositoryUrl)'=='' ">https://github.com/imesense-packages/wixtoolset</RepositoryUrl>
     <RepositoryType Condition=" '$(RepositoryType)'=='' ">git</RepositoryType>
     <RepositoryCommit Condition=" '$(RepositoryCommit)'=='' ">$(SomeVerInfoSha)</RepositoryCommit>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -48,7 +48,7 @@
       <NuspecProperties>$(NuspecProperties);Copyright=$(Copyright);Description=$(Description);Title=$(Title)</NuspecProperties>
       <NuspecProperties>$(NuspecProperties);RepositoryType=$(RepositoryType);RepositoryCommit=$(RepositoryCommit);RepositoryUrl=$(RepositoryUrl)</NuspecProperties>
       <NuspecProperties>$(NuspecProperties);PackageTags=$(PackageTags)</NuspecProperties>
-      <NuspecProperties>$(NuspecProperties);ProjectUrl=$(ProjectUrl);ProjectFolder=$(MSBuildProjectDirectory);RootFolder=$(RootFolder);EulaTxt=$(PackageEulaSource);IconPng=$(PackageIconSource)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);ProjectUrl=$(ProjectUrl);ProjectFolder=$(MSBuildProjectDirectory);RootFolder=$(RootFolder);EulaTxt=$(PackageEulaSource)</NuspecProperties>
     </PropertyGroup>
   </Target>
 

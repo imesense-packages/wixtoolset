@@ -2,7 +2,7 @@
 
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
      xmlns:bal="http://wixtoolset.org/schemas/v4/wxs/bal">
-  <Bundle Id="WixToolset.WixAdditionalTools" Name="!(loc.Name)" Manufacturer="$(Company)" Version="$(SetupVersion)"
+  <Bundle Id="ImeSense.WixToolset.WixAdditionalTools" Name="!(loc.Name)" Manufacturer="$(Company)" Version="$(SetupVersion)"
           AboutUrl="!(loc.AboutUrl)" HelpUrl="!(loc.SupportUrl)" UpdateUrl="!(loc.UpdateUrl)">
     <BootstrapperApplication>
       <bal:WixStandardBootstrapperApplication
@@ -12,7 +12,7 @@
         LogoFile="wix-logo-sq.png" />
     </BootstrapperApplication>
 
-    <SetVariable Variable="InstallFolder" Value="[ProgramFilesFolder]WiX Toolset v$(SetupMajorMinorVersion)\" />
+    <SetVariable Variable="InstallFolder" Value="[ProgramFilesFolder]ImeSense\WiX Toolset\$(SetupMajorMinorVersion)\" />
     <SoftwareTag Regid="!(loc.Regid)" InstallPath="[InstallFolder]" />
 
     <Update Location="!(loc.UpdateUrl)" />

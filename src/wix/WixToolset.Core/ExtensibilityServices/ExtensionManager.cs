@@ -20,6 +20,7 @@ namespace WixToolset.Core.ExtensibilityServices
         private const string WixToolsetExtensionPackageFolder = "wixext7";
 
         private const string UserWixFolderName = ".wix";
+        private const string MachineWixRootFolderName = "ImeSense";
         private const string MachineWixFolderName = "WixToolset";
         private const string ExtensionsFolderName = "extensions";
         private const string UserEnvironmentName = "WIX_EXTENSIONS";
@@ -119,11 +120,11 @@ namespace WixToolset.Core.ExtensibilityServices
 
             if (Environment.Is64BitOperatingSystem)
             {
-                path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFiles), MachineWixFolderName, ExtensionsFolderName);
+                path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFiles), MachineWixRootFolderName, MachineWixFolderName, ExtensionsFolderName);
                 locations.Add(new ExtensionCacheLocation(path, ExtensionCacheLocationScope.Machine));
             }
 
-            path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86), MachineWixFolderName, ExtensionsFolderName);
+            path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86), MachineWixRootFolderName, MachineWixFolderName, ExtensionsFolderName);
             locations.Add(new ExtensionCacheLocation(path, ExtensionCacheLocationScope.Machine));
 
             path = Path.Combine(Path.GetDirectoryName(new Uri(Assembly.GetCallingAssembly().CodeBase).LocalPath), ExtensionsFolderName);

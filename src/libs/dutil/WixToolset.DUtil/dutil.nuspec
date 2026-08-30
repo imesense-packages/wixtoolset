@@ -7,7 +7,7 @@
     <title>$title$</title>
     <description>$description$</description>
     <authors>$authors$</authors>
-    <icon>icon.png</icon>
+    <owners>ImeSense</owners>
     <readme>README.md</readme>
     <tags>$packageTags$</tags>
     <copyright>$copyright$</copyright>
@@ -16,7 +16,6 @@
   </metadata>
 
   <files>
-    <file src="$iconPng$" />
     <file src="$projectFolder$\..\README.md" />
     <file src="$projectFolder$\build\$id$.props" target="build\" />
     <file src="$projectFolder$\inc\*" target="build\native\include" />

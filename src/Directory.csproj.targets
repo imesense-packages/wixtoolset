@@ -21,7 +21,6 @@
 
   <ItemGroup Condition=" '$(IsWixTestProject)'!='true' ">
     <Content Include="$(PackageEulaSource)" Pack="true" PackagePath="/" />
-    <Content Include="$(PackageIconSource)" Pack="true" PackagePath="/" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(IsWixTestProject)'=='true' ">

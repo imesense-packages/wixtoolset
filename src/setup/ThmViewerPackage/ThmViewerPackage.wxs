@@ -1,6 +1,6 @@
-﻿<!-- Copyright (c) .NET Foundation and contributors. All rights reserved. Licensed under the Microsoft Reciprocal License. See LICENSE.TXT file in the project root for full license information. -->
+<!-- Copyright (c) .NET Foundation and contributors. All rights reserved. Licensed under the Microsoft Reciprocal License. See LICENSE.TXT file in the project root for full license information. -->
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-  <Package Id="WixToolset.ThemeViewer.Package" Name="WiX Toolset Theme Viewer" Manufacturer="$(Company)" Language="1033" Version="!(bind.fileVersion.ThmViewerFile)">
+  <Package Id="ImeSense.WixToolset.ThemeViewer.Package" Name="ImeSense WiX Toolset Theme Viewer" Manufacturer="$(Company)" Language="1033" Version="!(bind.fileVersion.ThmViewerFile)">
     <Component>
       <File Id="ThmViewerFile" Source="thmviewer.exe" />
       <Shortcut Name="!(bind.property.ProductName)" Directory="ShortcutFolder" Advertise="yes" />
@@ -10,10 +10,14 @@
 
   <Fragment>
     <StandardDirectory Id="ProgramFilesFolder">
-      <Directory Id="INSTALLFOLDER" Name="WiX Toolset v$(SetupMajorMinorVersion)" />
+      <Directory Id="ImeSenseFolder" Name="ImeSense">
+        <Directory Id="WixToolsetFolder" Name="WiX Toolset">
+          <Directory Id="INSTALLFOLDER" Name="$(SetupMajorMinorVersion)" />
+        </Directory>
+      </Directory>
     </StandardDirectory>
     <StandardDirectory Id="ProgramMenuFolder">
-      <Directory Id="ShortcutFolder" Name="WiX Toolset" />
+      <Directory Id="ShortcutFolder" Name="ImeSense WiX Toolset" />
     </StandardDirectory>
   </Fragment>
 
