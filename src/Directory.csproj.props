@@ -5,7 +5,10 @@
     <LangVersion Condition=" '$(TargetFrameworkVersion)'=='' ">13.0</LangVersion>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)wix.snk))</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile Condition=" '$(WixSnkFile)' != '' ">$(WixSnkFile)</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile Condition=" '$(WixSnkFile)' == '' ">$(WixSnkPublicKeyFile)</AssemblyOriginatorKeyFile>
+    <!-- Without the private key, sign with the public key only (same token, signature not verifiable). -->
+    <PublicSign Condition=" '$(WixSnkFile)' == '' ">true</PublicSign>
     <CreateDocumentation Condition=" '$(CreateDocumentationFile)'!='true' ">false</CreateDocumentation>
     <DocumentationFile Condition=" '$(CreateDocumentationFile)'=='true' ">$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
     <DebugType Condition=" '$(DebugType)'=='' ">embedded</DebugType>

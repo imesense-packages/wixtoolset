@@ -26,6 +26,13 @@
     <PackageIdPrefix>ImeSense.</PackageIdPrefix>
     <PackageId Condition=" '$(PackageId)' == '' ">$(PackageIdPrefix)$(MSBuildProjectName)</PackageId>
 
+    <!-- Single strong-name key for all managed assemblies built in this repo.
+         The private key pair (src/wix.snk) is NOT committed: developers with the key get
+         fully signed assemblies; everyone else falls back to the committed public key
+         (src/wix.pub.snk) and PublicSign (delay-sign) - same PublicKeyToken either way. -->
+    <WixSnkFile Condition=" '$(WixSnkFile)' == '' and Exists('$(MSBuildThisFileDirectory)wix.snk') ">$(MSBuildThisFileDirectory)wix.snk</WixSnkFile>
+    <WixSnkPublicKeyFile>$(MSBuildThisFileDirectory)wix.pub.snk</WixSnkPublicKeyFile>
+
     <!-- This is C++-specific but used from managed projects to pick up native build artifacts. -->
     <WixNativeSdkLibraryToolset>v143</WixNativeSdkLibraryToolset>
     <PlatformToolset Condition=" '$(ConfigurationType)' == 'StaticLibrary' ">$(WixNativeSdkLibraryToolset)</PlatformToolset>
