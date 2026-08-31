@@ -7,9 +7,11 @@
   </PropertyGroup>
 
   <Target Name="ZipPdbs" BeforeTargets="AfterBuild" Condition=" '$(Configuration)' == 'Release' ">
+    <!-- Name the PDB archive after the package version (from build\SomeVerInfo.props) instead of the SDK default 1.0.0.
+         Resolved inside the target because $(PackageVersion) is imported via Directory.Build.targets after project evaluation. -->
     <ZipDirectory
         SourceDirectory="$(PdbsFolder)"
-        DestinationFile="$(ArtifactsFolder)\wix-pdbs.$(Version).zip"
+        DestinationFile="$(ArtifactsFolder)\wix-pdbs.$(PackageVersion).zip"
         Overwrite="true" />
   </Target>
 </Project>
