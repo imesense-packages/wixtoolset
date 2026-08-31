@@ -9,7 +9,7 @@
         LicenseFile="..\LICENSE.rtf"
         Theme="rtfLicense"
         ShowVersion="true"
-        LogoFile="wix-logo-sq.png" />
+        LogoFile="../../../res/logo-placeholder.png" />
     </BootstrapperApplication>
 
     <SetVariable Variable="InstallFolder" Value="[ProgramFilesFolder]ImeSense\WiX Toolset\$(SetupMajorMinorVersion)\" />
